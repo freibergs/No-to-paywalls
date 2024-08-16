@@ -83,6 +83,11 @@ This project is a Flask-based web application that allows users to retrieve and 
     python app.py
     ```
 
+## Screenshots
+
+![Index page](examples/example1.png)
+![Article page](examples/example2.png)
+
 ## License
 
 This project is licensed under the MIT License.
