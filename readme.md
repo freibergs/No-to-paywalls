@@ -90,4 +90,4 @@ This project is a Flask-based web application that allows users to retrieve and 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT Licence](LICENSE.md).
