@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saki NĒ! paywalliem!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favico.png') }}">
+</head>
+
+<body class="bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white rounded-lg shadow-lg p-6 sm:p-8 w-full max-w-sm sm:max-w-md">
+        <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-4 sm:mb-6">Saki NĒ! paywalliem!</h1>
+        
+        <p class="text-md sm:text-m text-center text-gray-700 mb-6 bg-blue-100 p-4 rounded-lg">
+            {{ info_text }}
+        </p>
+
+        <h2 class="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-4 sm:mb-6">Ievadi DELFI/TVNET URL!</h2>
+        
+        <form method="post" class="space-y-3 sm:space-y-4">
+            <input type="text" name="url" placeholder="Kopē to šeit"
+                class="w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                required>
+            <button type="submit"
+                class="w-full bg-blue-600 text-white p-2 sm:p-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+                Aiziet!
+            </button>
+        </form>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flex justify-center pt-2">
+                    {% for category, message in messages %}
+                        <div class="text-red-600 text-sm text-center">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+    </div>
+</body>
+</html>

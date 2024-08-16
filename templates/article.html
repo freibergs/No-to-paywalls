@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="{{ url_for('static', filename='favico.png') }}">
+
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+    <div class="container mx-auto max-w-4xl p-6">
+        <article class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <header class="p-6">
+                <h1 class="text-3xl font-bold mb-4 text-center">{{ title }}</h1>
+                <div class="text-center mb-6">
+                    <a href="{{ full_url }}" class="text-blue-600 hover:text-blue-800 underline break-all">
+                        Oriģinālā saite
+                    </a>
+                </div>
+                <img src="{{ meta_image_url }}" alt="Article Image" class="w-full h-auto rounded-lg mb-6">
+                <p class="text-xl font-semibold mb-4 text-gray-700">{{ lead }}</p>
+            </header>
+            <section class="p-6">
+                <div class="prose max-w-none">
+                    {{ text_content | safe }}
+                </div>
+            </section>
+        </article>
+        
+        <div class="mt-6 text-center">
+            <a href="{{ url_for('index') }}" class="text-blue-600 font-semibold hover:text-blue-800 transition duration-300">
+                ← Lasīt citus rakstus
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
