@@ -75,8 +75,8 @@ This project is a Flask-based web application that allows users to retrieve and 
     TVNET_COOKIE=your_tvnet_cookie
     USER_AGENT=your_user_agent
     SECRET_KEY=your_secret_key
-    ERROR_MSG="Your custom error message"
-    INFO_TEXT="Your informational text"
+    ERROR_MSG=Your custom error message
+    INFO_TEXT=Your informational text
     ```
 4. Run the application:
     ```bash
